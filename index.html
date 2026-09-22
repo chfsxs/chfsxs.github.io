@@ -2,141 +2,121 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#2563eb">
-<title>戳主席 · 全网累计</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戳主席 · 最佳员工奖</title>
 <style>
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif}
-body{min-height:100vh;overflow:hidden;display:grid;place-items:center;color:#fff;background:radial-gradient(circle at 15% 15%,#60a5fa 0,transparent 28%),radial-gradient(circle at 85% 80%,#a78bfa 0,transparent 32%),linear-gradient(135deg,#2563eb,#4f46e5 52%,#7c3aed)}
-.bg{position:fixed;inset:0;overflow:hidden;pointer-events:none}.orb{position:absolute;border-radius:50%;background:rgba(255,255,255,.1);filter:blur(3px);animation:float 8s ease-in-out infinite}.o1{width:280px;height:280px;left:-90px;top:-70px}.o2{width:360px;height:360px;right:-120px;bottom:-130px;animation-delay:-3s}.o3{width:120px;height:120px;right:20%;top:14%;animation-delay:-5s}
-.card{position:relative;z-index:2;width:min(90vw,720px);padding:58px 35px 50px;text-align:center;border:1px solid rgba(255,255,255,.3);border-radius:32px;background:rgba(255,255,255,.13);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 30px 80px rgba(15,23,42,.28),inset 0 1px rgba(255,255,255,.25);animation:enter .8s ease-out}
-.counter{position:fixed;right:22px;top:20px;z-index:5;padding:12px 18px;border-radius:16px;background:rgba(15,23,42,.38);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(12px);font-size:15px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
-.counter b{font-size:24px;margin:0 3px;color:#fde68a}.icon{font-size:68px;margin-bottom:14px;animation:bounce 3s ease-in-out infinite}
-h1{margin:0;font-size:clamp(38px,7vw,68px);letter-spacing:3px;text-shadow:0 7px 25px rgba(0,0,0,.18)}.sub{margin:18px 0 0;font-size:20px;opacity:.9}
-button{margin-top:32px;border:0;border-radius:999px;padding:16px 42px;min-width:180px;color:#fff;font-size:20px;font-weight:700;cursor:pointer;background:linear-gradient(90deg,#f59e0b,#ef4444);box-shadow:0 12px 30px rgba(239,68,68,.32);transition:transform .18s,box-shadow .18s}
-button:hover{transform:translateY(-3px);box-shadow:0 17px 36px rgba(239,68,68,.42)}button:active{transform:translateY(1px) scale(.98)}button:disabled{opacity:.65;cursor:wait}
-.hint{margin-top:20px;font-size:14px;opacity:.62}.toast{position:fixed;left:50%;top:50%;z-index:10;transform:translate(-50%,-50%) scale(.75);width:min(88vw,620px);padding:30px 28px;text-align:center;border-radius:24px;background:rgba(255,255,255,.97);color:#1e1b4b;box-shadow:0 30px 90px rgba(15,23,42,.38);opacity:0;pointer-events:none}
-.toast.show{animation:pop 1.9s ease both}.toast .award{font-size:44px}.toast h2{margin:10px 0 8px;font-size:clamp(22px,4vw,34px)}.toast p{margin:0;color:#4c466f;font-size:18px}
-.confetti{position:fixed;z-index:9;top:-25px;pointer-events:none;animation:fall linear forwards}
-.float-love{position:fixed;z-index:20;pointer-events:none;left:50%;top:50%;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.96);color:#e11d48;font-size:20px;font-weight:800;box-shadow:0 12px 35px rgba(225,29,72,.25);white-space:nowrap;animation:loveFloat 1.45s cubic-bezier(.2,.8,.2,1) forwards}
-.float-love::before{content:"💖";margin-right:6px}
-@keyframes loveFloat{0%{opacity:0;transform:translate(-50%,20px) scale(.7)}12%{opacity:1;transform:translate(-50%,0) scale(1.08)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% - 145px)) scale(.92)}}
-.status{margin-top:12px;font-size:12px;opacity:.55}
-@keyframes enter{from{opacity:0;transform:translateY(25px) scale(.96)}to{opacity:1;transform:none}}@keyframes float{50%{transform:translate(25px,-30px) scale(1.08)}}@keyframes bounce{50%{transform:translateY(-8px) rotate(3deg)}}@keyframes pop{0%{opacity:0;transform:translate(-50%,-50%) scale(.72)}12%,82%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(.96)}}@keyframes fall{to{transform:translate3d(var(--x),110vh,0) rotate(var(--r));opacity:0}}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif}
+body{
+  min-height:100vh;overflow:hidden;display:grid;place-items:center;color:#fff;
+  background:radial-gradient(circle at 20% 15%,#60a5fa 0,transparent 28%),
+             radial-gradient(circle at 85% 80%,#a78bfa 0,transparent 32%),
+             linear-gradient(135deg,#2563eb,#4f46e5 52%,#7c3aed);
+}
+.bg{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.orb{position:absolute;border-radius:50%;background:rgba(255,255,255,.1);filter:blur(3px);animation:float 8s ease-in-out infinite}
+.o1{width:280px;height:280px;left:-90px;top:-70px}.o2{width:360px;height:360px;right:-120px;bottom:-130px;animation-delay:-3s}.o3{width:120px;height:120px;right:20%;top:14%;animation-delay:-5s}
+.card{
+  position:relative;width:min(90vw,720px);padding:58px 35px 50px;text-align:center;
+  border:1px solid rgba(255,255,255,.3);border-radius:32px;
+  background:rgba(255,255,255,.13);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  box-shadow:0 30px 80px rgba(15,23,42,.28),inset 0 1px rgba(255,255,255,.25);
+  animation:enter .8s ease-out;
+}
+.counter{
+  position:fixed;right:22px;top:20px;z-index:5;padding:12px 18px;border-radius:16px;
+  background:rgba(15,23,42,.35);border:1px solid rgba(255,255,255,.22);
+  backdrop-filter:blur(12px);font-size:15px;box-shadow:0 10px 30px rgba(0,0,0,.15)
+}
+.counter b{font-size:22px;margin:0 4px;color:#fde68a}
+.icon{font-size:68px;margin-bottom:14px;animation:bounce 3s ease-in-out infinite}
+h1{margin:0;font-size:clamp(38px,7vw,68px);letter-spacing:3px;text-shadow:0 7px 25px rgba(0,0,0,.18)}
+.sub{margin:18px 0 0;font-size:20px;opacity:.9}
+button{
+  margin-top:32px;border:0;border-radius:999px;padding:16px 42px;min-width:180px;
+  color:#fff;font-size:20px;font-weight:700;cursor:pointer;
+  background:linear-gradient(90deg,#f59e0b,#ef4444);
+  box-shadow:0 12px 30px rgba(239,68,68,.32);transition:transform .18s,box-shadow .18s;
+}
+button:hover{transform:translateY(-3px);box-shadow:0 17px 36px rgba(239,68,68,.42)}
+button:active{transform:translateY(1px) scale(.98)}
+button:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.hint{margin-top:20px;font-size:14px;opacity:.62}
+.toast{
+  position:fixed;left:50%;top:50%;z-index:10;transform:translate(-50%,-50%) scale(.75);
+  width:min(88vw,620px);padding:30px 28px;text-align:center;border-radius:24px;
+  background:rgba(255,255,255,.96);color:#1e1b4b;
+  box-shadow:0 30px 90px rgba(15,23,42,.38);opacity:0;pointer-events:none;
+}
+.toast.show{animation:pop 1.9s ease both}
+.toast .award{font-size:44px}.toast h2{margin:10px 0 8px;font-size:clamp(22px,4vw,34px)}.toast p{margin:0;color:#4c466f;font-size:18px}
+.confetti{position:fixed;z-index:9;width:9px;height:16px;top:-25px;pointer-events:none;animation:fall linear forwards}
+@keyframes enter{from{opacity:0;transform:translateY(25px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes float{50%{transform:translate(25px,-30px) scale(1.08)}}
+@keyframes bounce{50%{transform:translateY(-8px) rotate(3deg)}}
+@keyframes pop{0%{opacity:0;transform:translate(-50%,-50%) scale(.72)}12%,82%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(.96)}}
+@keyframes fall{to{transform:translate3d(var(--x),110vh,0) rotate(var(--r));opacity:0}}
 @media(max-width:600px){.counter{right:12px;top:12px;font-size:13px;padding:9px 12px}.card{padding:48px 22px 42px}h1{letter-spacing:1px}.icon{font-size:56px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<div class="bg"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
-<div class="counter">戳主席：第 <b id="count">—</b> 次</div>
+<div class="bg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+
+<div class="counter" aria-live="polite">戳主席：第 <b id="count">0</b> 次</div>
 
 <main class="card">
   <div class="icon">👑</div>
   <h1>欢迎加入运动协会</h1>
   <div class="sub">准备好戳主席了吗？</div>
   <button id="poke" type="button">点击此处</button>
-  <div class="hint">每一次点击都会计入全网累计次数 ✨</div>
-  <div id="status" class="status">正在连接累计计数器…</div>
+  <div class="hint">每点击一次，都会触发一次惊喜 ✨</div>
 </main>
 
-<div id="toast" class="toast" role="status" aria-live="assertive">
+div id="toast" class="toast" role="status" aria-live="assertive">
   <div class="award">🏆</div>
   <h2>恭喜你获得了最佳员工奖</h2>
   <p>主席好感度 +1 💖</p>
 </div>
 
-<script type="module">
-/*
-  这里填写 Firebase 控制台 → 项目设置 → Web 应用中的配置。
-  注意：这些 web config 值本身不是密码；真正保护数据库的是 Realtime Database Security Rules。
-*/
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.firebasestorage.app",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+<script>
+(() => {
+  const button = document.getElementById('poke');
+  const countEl = document.getElementById('count');
+  const toast = document.getElementById('toast');
+  let count = 0;
+  let toastTimer = null;
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
-import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-database.js";
-
-const button = document.getElementById("poke");
-const countEl = document.getElementById("count");
-const statusEl = document.getElementById("status");
-const toast = document.getElementById("toast");
-
-try {
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
-  const counterRef = ref(db, "global/pokeCount");
-
-  // 所有人实时看到同一个累计数字。
-  onValue(counterRef, snapshot => {
-    countEl.textContent = String(snapshot.val() ?? 0);
-    statusEl.textContent = "全网累计 · 实时同步";
-  }, () => {
-    statusEl.textContent = "连接失败，请检查 Firebase 配置";
-  });
-
-  button.addEventListener("click", async () => {
-    button.disabled = true;
-    try {
-      // transaction 能处理多人同时点击，避免两个用户同时点击时覆盖计数。
-      await runTransaction(counterRef, current => (Number(current) || 0) + 1);
-      showToast();
-      makeConfetti();
-      makeLoveFloat();
-    } catch (e) {
-      console.error(e);
-      statusEl.textContent = "本次点击未计入，请稍后再试";
-    } finally {
-      button.disabled = false;
+  function makeConfetti() {
+    const symbols = ['🎉','✨','⭐','💙','🏆'];
+    for (let i = 0; i < 18; i++) {
+      const el = document.createElement('span');
+      el.className = 'confetti';
+      el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+      el.style.left = (8 + Math.random() * 84) + 'vw';
+      el.style.fontSize = (12 + Math.random() * 12) + 'px';
+      el.style.setProperty('--x', ((Math.random() - .5) * 220) + 'px');
+      el.style.setProperty('--r', ((Math.random() - .5) * 720) + 'deg');
+      el.style.animationDuration = (1.4 + Math.random() * 1.1) + 's';
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 2800);
     }
-  });
-} catch (e) {
-  console.error(e);
-  countEl.textContent = "—";
-  statusEl.textContent = "请先填写 Firebase 配置";
-}
-
-function showToast() {
-  toast.classList.remove("show");
-  void toast.offsetWidth;
-  toast.classList.add("show");
-  setTimeout(() => toast.classList.remove("show"), 1900);
-}
-
-function makeLoveFloat() {
-  // 点击时在按钮附近生成一个向上飘出的“主席好感度 +1”飘窗。
-  const rect = button.getBoundingClientRect();
-  const el = document.createElement("div");
-  el.className = "float-love";
-  el.textContent = "主席好感度 +1";
-  el.style.left = (rect.left + rect.width / 2) + "px";
-  el.style.top = (rect.top + rect.height / 2) + "px";
-  el.style.setProperty("--dx", ((Math.random() - .5) * 90) + "px");
-  document.body.appendChild(el);
-  setTimeout(() => el.remove(), 1500);
-}
-
-function makeConfetti() {
-  const symbols = ["🎉","✨","⭐","💙","🏆"];
-  for (let i = 0; i < 18; i++) {
-    const el = document.createElement("span");
-    el.className = "confetti";
-    el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-    el.style.left = (8 + Math.random() * 84) + "vw";
-    el.style.fontSize = (12 + Math.random() * 12) + "px";
-    el.style.setProperty("--x", ((Math.random() - .5) * 220) + "px");
-    el.style.setProperty("--r", ((Math.random() - .5) * 720) + "deg");
-    el.style.animationDuration = (1.4 + Math.random() * 1.1) + "s";
-    document.body.appendChild(el);
-    setTimeout(() => el.remove(), 2800);
   }
-}
+
+  button.addEventListener('click', () => {
+    count += 1;
+    countEl.textContent = String(count);
+
+    toast.classList.remove('show');
+    void toast.offsetWidth;
+    toast.classList.add('show');
+
+    makeConfetti();
+
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 1900);
+  });
+})();
 </script>
 </body>
 </html>
